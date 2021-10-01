@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 90vh;
+    height: 90vh;
+    border: 1px solid black;
+
+}
+.square {
+    background-color: white;
+}
