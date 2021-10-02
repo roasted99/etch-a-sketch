@@ -1,19 +1,22 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgb(231, 182, 46), yellow);
 }
-h1 {
-    text-align: center;
+
+.reset {
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .container {
-    width: 90vh;
-    height: 90vh;
-    border: 1px solid black;
-
+  display: grid;
+  width: 960px;
+  height: 960px;
+  border: 1px solid black;
 }
 .square {
-    background-color: white;
+  background-color: white;
 }

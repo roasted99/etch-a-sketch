@@ -1,33 +1,32 @@
-const container = document.querySelector('.container')
+const container = document.querySelector('.container');
+const button = document.querySelector('.reset');
 let boxNum = 16;
-let box = '';
+//let box = '';
 
 function draw(boxes) {
     for (let i = 0; i < boxes ** 2; i++) {
         let box = document.createElement('div')
         box.classList.add('square');
-        box.style.backgroundColor = 'red'
-        container.appendChild(box)
-    }
+        container.appendChild(box);     
+    } 
     container.style.gridTemplateColumns = `repeat(${boxes}, auto)`;
-    container.style.gridTemplateRows = `repeat(${boxes}, auto);`
+    container.style.gridTemplateRows = `repeat(${boxes}, auto)`
 }
+draw(boxNum)
 
-draw(boxNum);
+button.addEventListener('click', () => {
+    boxNum = prompt('Please enter grid size no more than 100', 16);
+    container.innerHTML = '';
+    draw(boxNum);
+    color()
+})
 
-const reset = (resetBox) => {
-    let button = document.getElementsByTagName(button)
-    button.addEventListener('click', e => {
-        
+const color = () => {
+const squares = document.querySelectorAll('.square');
+squares.forEach((square => {
+    square.addEventListener('mouseover', e => {
+        e.target.style.backgroundColor = 'black'
     })
+}))
 }
-
-const drawGrid = () => {
-    let grids = document.querySelectorAll('.square');
-    grids.forEach(grid => {
-        grid.addEventListener('mouseover', e => {
-            grid.style.backgroundColor = 'black'
-        })
-    })
-}
-
+color()
